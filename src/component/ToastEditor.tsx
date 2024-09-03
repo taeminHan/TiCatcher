@@ -4,6 +4,7 @@ import '@toast-ui/editor/toastui-editor.css';
 import '@toast-ui/editor/toastui-editor-dark.css';
 import {useDarkMode} from "../utils/browserUtils.tsx";
 import {DARK, DEFAULT} from "../const/CommonConst.ts";
+import LoadingPage from "@/views/LoadingPage.tsx";
 
 export const ToastEditor = () => {
 
@@ -11,7 +12,9 @@ export const ToastEditor = () => {
 
     if (isDarkMode === null) {
         // TODO Loading UI 추가
-        return <div>Loading...</div>;
+        return (
+            <LoadingPage/>
+        )
     }
 
     return (
