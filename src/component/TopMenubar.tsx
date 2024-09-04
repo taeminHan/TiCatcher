@@ -15,7 +15,7 @@ export const TopMenubar = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const handleLogOut = () => {
-        setModalOpen(true);
+        setModalOpen(isModalOpen => !isModalOpen);
     }
     return (
         <>
@@ -25,11 +25,11 @@ export const TopMenubar = () => {
                     <MenubarContent>
                         <MenubarItem onClick={handleLogOut}>Log Out</MenubarItem>
                         <MenubarSeparator/>
+                        <MenubarItem>Version Info</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
             </Menubar>
-
-            {isModalOpen && <AlertDialogModal />}
+            <AlertDialogModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>
         </>
     )
 }

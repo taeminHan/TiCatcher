@@ -8,11 +8,23 @@ import {
     AlertDialogHeader,
     AlertDialogTitle
 } from "@/components/ui/alert-dialog"
+import {useNavigate} from "react-router-dom";
 
-export const AlertDialogModal = () => {
+
+interface AlertDialogModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+
+export const AlertDialogModal = ({isOpen, onClose}: AlertDialogModalProps) => {
+
+    const navigate = useNavigate();
+
+
     return (
         <>
-            <AlertDialog>
+            <AlertDialog open={isOpen}>
                 <AlertDialogContent>
                     <AlertDialogHeader>
                         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -22,8 +34,11 @@ export const AlertDialogModal = () => {
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction>Continue</AlertDialogAction>
+                        <AlertDialogCancel onClick={onClose}>Cancel</AlertDialogCancel>
+                        <AlertDialogAction onClick={() => {
+                            onClose();
+                            navigate("/");
+                        }}>Continue</AlertDialogAction>
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
