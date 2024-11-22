@@ -1,16 +1,26 @@
-import {ToastEditor} from "@/component/ToastEditor.tsx";
-import {Button} from "@/components/ui/button.tsx";
 import TopMenubar from "@/component/TopMenubar.tsx";
+// import { MilkdownProvider } from '@milkdown/react';
+// import { StrictMode } from 'react'
+// import {MilkdownEditor} from '@/component/Editor';
+import { CrepeEditor } from '../component/CrepeEditor.tsx';
 
 const EditorPage = () => {
-
+    const qwe = () =>{
+      return  CrepeEditor
+    }
+    CrepeEditor();
     return (
         <>
-            <TopMenubar/>
-            <ToastEditor/>
-            <Button>Click me</Button>
+            <TopMenubar />
+            {/* <div>
+              <MilkdownProvider>
+                <MilkdownEditor />
+              </MilkdownProvider>
+            </div> */}
+            <CrepeEditor />
         </>
-    )
-}
+
+    );
+};
 
 export default EditorPage;
