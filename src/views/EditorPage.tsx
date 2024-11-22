@@ -5,10 +5,6 @@ import TopMenubar from "@/component/TopMenubar.tsx";
 import { CrepeEditor } from '../component/CrepeEditor.tsx';
 
 const EditorPage = () => {
-    const qwe = () =>{
-      return  CrepeEditor
-    }
-    CrepeEditor();
     return (
         <>
             <TopMenubar />
