@@ -8,7 +8,6 @@ import LoadingPage from "@/views/LoadingPage.tsx";
 
 export default function App() {
     return (
-        <ThemeProvider defaultTheme={"system"} storageKey="vite-ui-theme">
             <BrowserRouter>
                 <Suspense fallback={<LoadingPage/>}>
                 <Routes>
@@ -17,6 +16,5 @@ export default function App() {
                 </Routes>
             </Suspense>
             </BrowserRouter>
-        </ThemeProvider>
     )
 }

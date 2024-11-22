@@ -71,6 +71,65 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media (prefers-color-scheme: dark){
+  .milkdown {
+    --crepe-color-background: #1B1C1D;
+    --crepe-color-on-background: #F8F9FF;
+    --crepe-color-surface: #111418;
+    --crepe-color-surface-low: #191C20;
+    --crepe-color-on-surface: #E1E2E8;
+    --crepe-color-on-surface-variant: #C3C6CF;
+    --crepe-color-outline: #8D9199;
+    --crepe-color-primary: #A1C9FD;
+    --crepe-color-secondary: #3C4858;
+    --crepe-color-on-secondary: #D7E3F8;
+    --crepe-color-inverse: #E1E2E8;
+    --crepe-color-on-inverse: #2E3135;
+    --crepe-color-inline-code: #FFB4AB;
+    --crepe-color-error: #FFB4AB;
+    --crepe-color-hover: #1D2024;
+    --crepe-color-selected: #32353A;
+    --crepe-color-inline-area: #111418;
+  
+    --crepe-font-title: Rubik, Cambria, "Times New Roman", Times, serif;
+    --crepe-font-default: Inter, Arial, Helvetica, sans-serif;
+    --crepe-font-code: "JetBrains Mono", Menlo, Monaco, "Courier New", Courier, monospace;
+  
+    --crepe-shadow-1: 0px 1px 2px 0px rgba(255, 255, 255, 0.30), 0px 1px 3px 1px rgba(255, 255, 255, 0.15);
+    --crepe-shadow-2: 0px 1px 2px 0px rgba(255, 255, 255, 0.30), 0px 2px 6px 2px rgba(255, 255, 255, 0.15);
+  }
+  
+}
+@media (prefers-color-scheme: light){
+  .milkdown {
+    --crepe-color-background: #FDFCFF;
+    --crepe-color-on-background: #1B1C1D;
+    --crepe-color-surface: #F8F9FF;
+    --crepe-color-surface-low: #F2F3FA;
+    --crepe-color-on-surface: #191C20;
+    --crepe-color-on-surface-variant: #43474E;
+    --crepe-color-outline: #73777F;
+    --crepe-color-primary: #37618E;
+    --crepe-color-secondary: #D7E3F8;
+    --crepe-color-on-secondary: #101C2B;
+    --crepe-color-inverse: #2E3135;
+    --crepe-color-on-inverse: #EFF0F7;
+    --crepe-color-inline-code: #BA1A1A;
+    --crepe-color-error: #BA1A1A;
+    --crepe-color-hover: #ECEEF4;
+    --crepe-color-selected: #E1E2E8;
+    --crepe-color-inline-area: #D8DAE0;
+  
+    --crepe-font-title: Rubik, Cambria, "Times New Roman", Times, serif;
+    --crepe-font-default: Inter, Arial, Helvetica, sans-serif;
+    --crepe-font-code: "JetBrains Mono", Menlo, Monaco, "Courier New", Courier, monospace;
+  
+    --crepe-shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    --crepe-shadow-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  }
+  
+  
+}
 
 @layer base {
   :root {
@@ -127,7 +186,6 @@ button:focus-visible {
     --chart-5: 340 75% 55%;
   }
 }
-
 @layer base {
   * {
     @apply border-border;
