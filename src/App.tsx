@@ -1,4 +1,3 @@
-import { ThemeProvider } from "./components/ui/theme-provider.tsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import EditorPage from "./views/EditorPage.tsx";
 import LoginPage from "./views/LoginPage.tsx";
